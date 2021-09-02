@@ -19,7 +19,7 @@ The correct table is as follows:
 
 ## Exact-Extract code
 The code for exact-extract algorithm can be found in [src/decoding/exact_extract.py](src/decoding/exact_extract.py).
-It is written mainly for T5 as some assumptions are taken, such as the existence of ```<extra_id_0>``` and ```<extra_id_0>``` to be prepended and appended to each span. Most of the algorithm is implemented in ```mlspan_calc``` function, where the three functions mentioned in the paper - ```L```, ```l``` and ```e``` are realized as matrices.
+It is written mainly for T5 as some assumptions are taken, such as the existence of ```<extra_id_0>``` and ```<extra_id_1>``` to be prepended and appended to each span. Most of the algorithm is implemented in ```mlspan_calc``` function, where the three functions mentioned in the paper - ```L```, ```l``` and ```e``` are realized as matrices.
 \
 If you wish to adapt it to some other encoder-decoder model (or even a decoder-only model) feel free to send an email (or.castel@cs.tau.ac.il).
 Note that in its current implementation, and due to memory requirement of the algorithm, it is not batched across samples and as such it is slower than greedy decoding (but faster than a naive implementation).
